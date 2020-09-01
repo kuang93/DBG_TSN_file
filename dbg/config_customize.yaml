@@ -1,0 +1,22 @@
+dataset:
+  video_info_file: ../temporal-segment-networks-docker/tsn/output_folder/tsn_anet_anno_100.json
+  feat_dir: ../temporal-segment-networks-docker/tsn/output_folder/3.all_csv_mean_100
+  video_filter: true
+  data_aug: true
+  tscale: 100
+  feature_dim: 400
+
+saver:
+  root_dir: output
+  checkpoint_dir: pretrained_model
+  result_dir: result_customize
+
+training:
+  learning_rate: [1e-3, 1e-4]
+  lr_epochs: [8, 4]
+  batch_size: 16
+
+testing:
+  mode: validation
+  # mode: testing
+  batch_size: 1
