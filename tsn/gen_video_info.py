@@ -27,6 +27,7 @@ def make_csv(vid_list,out_path):
     video_info.to_csv(out_path+'/video_info.csv')
 
 if __name__ == '__main__':
+    print(cv2.__version__)
     parser = argparse.ArgumentParser(description='generate video information')
     parser.add_argument('src_dir')
     parser.add_argument('out_dir')
